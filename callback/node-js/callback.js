@@ -1,11 +1,9 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const app = express();
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
-//  parameters to be passed 
 
 app.post("/", (req, res) => {
 let {
@@ -23,17 +21,14 @@ let {
        network_mcc,
        network_mnc,
        network_name
-}
-    } = req.body;
+       } = req.body;
 
      // sending response.
     res.json({
         transaction_id,
         "successful": "true"
     });
-
-    });
-
+});
 app.listen(7000, () => {
 console.log("app running on port 7000");
 });
