@@ -5,18 +5,15 @@ $data = json_decode($data, true);
 
 
     $transaction_id=$data['transaction_id'];
-    $remote_transaction_id=$data['remote_transaction_id'];
-    $successful=$data['successful'];
     $amount_collected=$data['amount_collected'];
-    $currency_from=$data['currency_from'];
-    $currency_to=$data['currency_to'];
-    $exchange_rate=$data['exchange_rate'];
+    $source_currency=$data['source_currency'];
+    $target_currency=$data['target_currency'];
     $subscriber_msisdn=$data['subscriber_msisdn'];
     $reference_number=$data['reference_number'];
     $paybill_number=$data['paybill_number'];
     $timestamp=$data['timestamp'];
-    $network_mcc=$data['network_mcc'];
-    $network_mnc=$data['network_mnc'];
+    $mcc_network=$data['mcc_network'];
+    $mnc_network=$data['mnc_network'];
     $network_name=$data['network_name'];
       
 

@@ -8,18 +8,15 @@ app.use(express.json());
 app.post("/", (req, res) => {
 let {
        transaction_id,
-       remote_transaction_id,
-       successful,
        amount_collected,
-       currency_from,
-       currency_to,
-       exchange_rate,
+       source_currency,
+       target_currency,
        subscriber_msisdn,
        reference_number,
        paybill_number,
        timestamp,
-       network_mcc,
-       network_mnc,
+       mcc_network,
+       mnc_network,
        network_name
        } = req.body;
 
